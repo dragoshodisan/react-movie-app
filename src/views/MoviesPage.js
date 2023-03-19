@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import './App.css';
-import SearchIcon from './search.svg';
-import MovieList from "./views/MovieList";
+import '../views/MoviesPage.css';
+import SearchIcon from "../search.svg";
+import MovieList from "../components/MovieList";
 
 
 const API_URL = 'http://www.omdbapi.com?apikey=722dcfdb';
@@ -25,7 +25,7 @@ const App = () => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
-    setMovies(data.Search);
+    setMovies(data.Search.filter(e => e.Type !== "game"));
 
   }
 

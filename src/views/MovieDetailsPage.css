@@ -5,11 +5,7 @@
     margin-left: auto;
     overflow: hidden;
     width: 37.5rem;
-    height: 21.25rem;
-    background: url(http://media.comicbook.com/2016/05/captain-america-civil-war-02082016-182755.png), #0a0a0a;
-    background-position: -60px 42px, 0;
-    background-repeat: no-repeat;
-    background-size: 70% 88%;
+    height: 26rem;
     border-radius: 0.25rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -24,6 +20,13 @@
     background: rgba(10, 10, 10, 0.15);
 }
 
+.card__boxoffice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
 .card__inner {
     position: relative;
     z-index: 2;
@@ -36,12 +39,14 @@
 
 .list--nav {
     justify-content: space-around;
+
 }
 
 .list--nav li {
     width: calc(100%/3);
     background: #111;
     transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+
 }
 
 .list--nav li:focus,
@@ -70,6 +75,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    margin-left: 2rem;
 }
 
 .card__info,
@@ -128,16 +134,7 @@
     border: 3px solid #c62828;
 }
 
-.card__rating:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: -5px;
-    left: 0;
-    width: 50%;
-    height: 20px;
-    background: #000;
-}
+
 
 footer {
     position: absolute;
@@ -149,10 +146,11 @@ footer {
 }
 
 .list--info {
-    padding-left: 1rem;
     float: right;
     justify-content: space-between;
     width: 50%;
+    list-style: none;
+    padding-left: 1.5rem;
 }
 
 .list--info li {

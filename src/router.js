@@ -1,17 +1,17 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
-import App from "./App";
-import MovieDetails from "./views/MovieDetails";
+import MoviesPage from "./views/MoviesPage";
+import MovieDetailsPage from "./views/MovieDetailsPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />
+        element: <MoviesPage />
     },
     {
         path: "/movies/:movieId",
-        element: <MovieDetails />
+        element: <MovieDetailsPage />
     },
 ]);
 
